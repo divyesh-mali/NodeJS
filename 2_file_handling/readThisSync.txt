@@ -1,0 +1,1 @@
+Bandhan na mane tinku jiya...(synchronous file reading)
