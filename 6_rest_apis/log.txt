@@ -3,3 +3,21 @@
 1750701284618 : POST : /api/users/999
 1750701291793 : POST : /api/users/
 1750701355488 : POST : ::1 : /api/users/
+1750793288381 : GET : ::1 : /
+1750828684140 : GET : ::1 : /api/users/
+1750830660116 : GET : ::1 : /api/users/
+1750830702919 : GET : ::1 : /api/users/
+1750830732601 : GET : ::1 : /api/users/
+1750837991883 : GET : ::1 : /api/users/
+1750838505631 : POST : ::1 : /api/users/
+1750838513186 : GET : ::1 : /api/users/
+1750838518780 : POST : ::1 : /api/users/
+1750838997502 : POST : ::1 : /api/users/
+1750839018056 : POST : ::1 : /api/users/
+1750839024910 : POST : ::1 : /api/users/
+1750839039300 : POST : ::1 : /api/users/
+1750839147222 : POST : ::1 : /api/users/
+1750839152920 : POST : ::1 : /api/users/
+1750840905401 : GET : ::1 : /api/users/1000
+1750840910858 : GET : ::1 : /api/users/10000
+1750840913861 : GET : ::1 : /api/users/1000

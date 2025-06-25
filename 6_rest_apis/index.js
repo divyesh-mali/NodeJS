@@ -8,7 +8,7 @@ const PORT = 8000;
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
-// Middleware/Plugins
+// Middleware/Plugins -> https://expressjs.com/en/guide/writing-middleware.html
 app.use((req, res, next) => {
     console.log('Hello from middleware 1');
     req.myUserName = 'Divyesh.dev';
@@ -25,7 +25,10 @@ app.use((req, res, next) => {
 
 // Routes
 app.get('/api/users', (req, res) => {
-    console.log("I'm in get route", req.myUserName);
+    // console.log("I'm in get route", req.myUserName);
+    res.setHeader('X-MyName', 'Divyesh Mali'); // GOOD PRACTICE :- Always add prefix "X-" to any custom headers you add so that you can differentiate between built in header & custom headers
+
+    // console.log(req.headers);
     return res.json(users);
 });
 
@@ -41,6 +44,10 @@ app.get('/users', (req, res) => {
 app.get('/api/users/:id', (req, res) => {
     const id = Number(req.params.id);
     const user = users.find((user) => user.id === id);
+
+    // If we enter a user ID which is not present then it will return a error status code of 400
+    if (!user) return res.status(400).json({error: 'user not found'});
+    
     return res.json(user);
 })
     // PATCH FUNCTIONALITY IS NOT WORKING OR I'M NOT SURE HOW TO DO IT
@@ -89,9 +96,16 @@ app.get('/api/users/:id', (req, res) => {
 
 app.post('/api/users', (req, res) => {
     const body = req.body;
+
+    // Due to this condition, we make it mandatory to enter all the fields before making a POST request.
+    // If we enter all the fields it will return status: "success" otherwise it will return status code 400
+    if (!body || !body.first_name || !body.last_name || !body.email || !body.gender || !body.job_title) {
+        return res.status(400).json({msg: 'All fields are required...'});
+    }
+
     users.push({...body, id: users.length + 1});
     fs.writeFile('./MOCK_DATA.json', JSON.stringify(users), (err, data) => {
-        return res.json({status: 'success', id: users.length});
+        return res.status(201).json({status: 'success', id: users.length});
     });
 });
 
