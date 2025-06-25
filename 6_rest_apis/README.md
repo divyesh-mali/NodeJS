@@ -1,0 +1,2 @@
+# Note
+We have to restart our server each time we want to see the changes made in express server. In order to solve this issue we've used the package `nodemon` and we run the program using command `nodemon index.js` internally but for simplicity, we've defined a script `npm run start`
