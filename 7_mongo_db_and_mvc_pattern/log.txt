@@ -1,0 +1,17 @@
+1751099217125 : POST : ::1 : /api/users/1000
+1751099233778 : POST : ::1 : /api/users/
+1751099435630 : POST : ::1 : /api/users/
+1751099779898 : GET : ::1 : /
+1751099783300 : GET : ::1 : /users
+1751099784914 : GET : ::1 : /favicon.ico
+1751099832475 : POST : ::1 : /api/users/
+1751099853932 : GET : ::1 : /users
+1751099995068 : POST : ::1 : /api/users/
+1751100068600 : GET : ::1 : /api/users/
+1751100821315 : GET : ::1 : /users
+1751100827469 : GET : ::1 : /api/users/685fa9b82908958878bd02d1
+1751101034034 : GET : ::1 : /api/users/685fa9b82908958878bd02d1
+1751101066618 : PATCH : ::1 : /api/users/685fa9b82908958878bd02d1
+1751101078102 : GET : ::1 : /api/users/685fa9b82908958878bd02d1
+1751101339914 : DELETE : ::1 : /api/users/685faa5ba5ebcaab64ac9825
+1751101364111 : GET : ::1 : /users
